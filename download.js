@@ -95,7 +95,7 @@ npm run build:cert
 - Tour interactivo de la aplicación
 
 ## Autores
-Este proyecto fue desarrollado por el equipo de desarrollo web.`;
+Este proyecto fue desarrollado por el equipo de desarrollo web y miguel perpiñan.`;
 
 // Crear el archivo README.md
 fs.writeFileSync(path.join(__dirname, 'README.md'), content);
