@@ -1,4 +1,7 @@
-# Aplicación de Búsqueda de Grabaciones
+const fs = require('fs');
+const path = require('path');
+
+const content = `# Aplicación de Búsqueda de Grabaciones
 
 ## Descripción
 Aplicación web para búsqueda y descarga de grabaciones de audio almacenadas en Google Cloud Storage. Permite filtrar por diferentes criterios como fecha, hora, rango de fechas/horas y número telefónico.
@@ -11,7 +14,7 @@ Aplicación web para búsqueda y descarga de grabaciones de audio almacenadas en
 - Estilos: TailwindCSS
 
 ## Estructura del Proyecto
-```
+\`\`\`
 ├── client/               # Frontend React
 │   ├── src/             
 │   │   ├── Components/  # Componentes React
@@ -21,7 +24,7 @@ Aplicación web para búsqueda y descarga de grabaciones de audio almacenadas en
 └── server/              # Backend Node.js
     ├── server.mjs      # Servidor Express
     └── ...
-```
+\`\`\`
 
 ## Requisitos
 - Node.js >= 18
@@ -31,35 +34,35 @@ Aplicación web para búsqueda y descarga de grabaciones de audio almacenadas en
 ## Instalación
 
 ### Backend
-```bash
+\`\`\`bash
 cd server
 npm install
-```
+\`\`\`
 
 ### Frontend 
-```bash
+\`\`\`bash
 cd client
 npm install
-```
+\`\`\`
 
 ## Variables de Entorno
 
 ### Backend (.env)
-```
+\`\`\`
 PORT=9090
 GOOGLE_APPLICATION_CREDENTIALS=./service-account.json
 BUCKET_NAME=nombre_bucket_storage
-```
+\`\`\`
 
 ### Frontend (.env)
-```
+\`\`\`
 VITE_API_SERVER=http://localhost:9090/analytics_app_audios/
-```
+\`\`\`
 
 ## Ejecución
 
 ### Backend
-```bash
+\`\`\`bash
 # Desarrollo
 npm run start:dev
 
@@ -68,10 +71,10 @@ npm run start:prod
 
 # Certificación
 npm run start:cert
-```
+\`\`\`
 
 ### Frontend
-```bash
+\`\`\`bash
 # Desarrollo
 npm run dev
 
@@ -80,7 +83,7 @@ npm run build:prod
 
 # Certificación  
 npm run build:cert
-```
+\`\`\`
 
 ## Características Principales
 - Login de usuarios
@@ -90,3 +93,11 @@ npm run build:cert
 - Descarga de audios en formato MP3
 - Exportación a Excel
 - Tour interactivo de la aplicación
+
+## Autores
+Este proyecto fue desarrollado por el equipo de desarrollo web.`;
+
+// Crear el archivo README.md
+fs.writeFileSync(path.join(__dirname, 'README.md'), content);
+
+console.log('Archivo README.md creado exitosamente');
