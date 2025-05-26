@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Hooks/AuthContext'; // Adjust the path accordingly
-import logo from "./LogoGasco.png";
+//import logo from "./LogoGasco.png";
 import TourModal from "../Helpers/TourModal";
 
 const Layout = ({ startTour }) => {
